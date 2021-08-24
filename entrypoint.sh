@@ -44,7 +44,7 @@ if git status | grep -q "Changes to be committed"
 then
   message="Update from https://github.com/$GITHUB_REPOSITORY/commit/$GITHUB_SHA"
   if [[ -n "$INPUT_COMMIT_MESSAGE" ]]; then
-    message=$COMMIT_MESSAGE
+    message=$INPUT_COMMIT_MESSAGE
   fi
   git commit --message "$message"
   echo "Pushing git commit"
