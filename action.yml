@@ -29,6 +29,9 @@ inputs:
   commit_message:
     description: 'Commit message'
     required: false
+  pr_title:
+    description: The title of the PR to be opened
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -42,6 +45,7 @@ runs:
     - ${{ inputs.destination-base-branch }}
     - ${{ inputs.pull-request-reviewers }}
     - ${{ inputs.commit-message }}
+    - ${{ inputs.pr-title }}
 branding:
   icon: 'git-commit'
   color: 'green'
