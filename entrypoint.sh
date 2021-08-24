@@ -53,7 +53,7 @@ then
   gh pr create -t $INPUT_DESTINATION_HEAD_BRANCH \
                -b $INPUT_DESTINATION_HEAD_BRANCH \
                -B $INPUT_DESTINATION_BASE_BRANCH \
-               -H $INPUT_PR_TITLE \
+               -H "$INPUT_PR_TITLE" \
                   $PULL_REQUEST_REVIEWERS
 else
   echo "No changes detected"
